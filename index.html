@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Importancia de Medir la Calidad del Software</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <span class="nav-mark">Blog · Calidad de Software</span>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#definicion">Definición</a></li>
+      <li><a href="#dimensiones">Dimensiones</a></li>
+      <li><a href="#metricas">Métricas</a></li>
+      <li><a href="#ejemplos">Casos Reales</a></li>
+      <li><a href="#curso">Ficha del curso</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= ARTICLE HEADER ================= -->
+<header class="article-head">
+  <p class="overline" data-reveal>Aseguramiento y Métricas de Software</p>
+  <h1 class="headline" data-reveal>La Importancia de Medir la Calidad del Software</h1>
+  <p class="subhead" data-reveal>Lo que no se mide no se puede controlar, y lo que no se controla no se puede mejorar. Descubre por qué la medición de calidad es vital en el ciclo de desarrollo.</p>
+
+  <div class="byline" data-reveal>
+    <span class="avatar">AM</span>
+    <div class="byline-text">
+      <span class="byline-name">Ariel Maldonado</span>
+      <span class="byline-meta">26 de septiembre de 2026 · 8 min de lectura</span>
+    </div>
+  </div>
+
+  <div class="hero-visual" data-reveal>
+    <svg id="heroSvg" viewBox="0 0 640 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle class="cycle-ring" cx="320" cy="190" r="140"/>
+      <path class="cycle-arrow" d="M320 50 A140 140 0 0 1 460 190" marker-end="url(#arrow1)"/>
+      <path class="cycle-arrow" d="M460 190 A140 140 0 0 1 320 330" marker-end="url(#arrow2)"/>
+      <path class="cycle-arrow" d="M320 330 A140 140 0 0 1 180 190" marker-end="url(#arrow3)"/>
+      <path class="cycle-arrow" d="M180 190 A140 140 0 0 1 320 50" marker-end="url(#arrow4)"/>
+
+      <circle class="cycle-node" cx="320" cy="50" r="34"/>
+      <text class="cycle-text" x="320" y="55" text-anchor="middle">Planificar</text>
+
+      <circle class="cycle-node" cx="460" cy="190" r="34"/>
+      <text class="cycle-text" x="460" y="195" text-anchor="middle">Medir</text>
+
+      <circle class="cycle-node" cx="320" cy="330" r="34"/>
+      <text class="cycle-text" x="320" y="335" text-anchor="middle">Analizar</text>
+
+      <circle class="cycle-node" cx="180" cy="190" r="34"/>
+      <text class="cycle-text" x="180" y="195" text-anchor="middle">Mejorar</text>
+
+      <defs>
+        <marker id="arrow1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" class="arrow-fill"/></marker>
+        <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" class="arrow-fill"/></marker>
+        <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" class="arrow-fill"/></marker>
+        <marker id="arrow4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" class="arrow-fill"/></marker>
+      </defs>
+    </svg>
+  </div>
+</header>
+
+<main>
+  <div class="article-wrap">
+
+    <!-- ================= TOC ================= -->
+    <nav class="toc" aria-label="Contenido del artículo" data-reveal>
+      <span class="toc-label">En este artículo</span>
+      <a href="#definicion">¿Qué es la medición de calidad?</a>
+      <a href="#dimensiones">Dimensiones clave de la calidad</a>
+      <a href="#metricas">Métricas esenciales de software</a>
+      <a href="#ejemplos">Impacto y casos de estudio</a>
+      <a href="#curso">Ficha del curso</a>
+      <a href="#referencias">Referencias</a>
+    </nav>
+
+    <!-- ================= DEFINICIÓN ================= -->
+    <section id="definicion">
+      <h2 data-reveal>¿Por qué es crítica la medición de la calidad?</h2>
+      <p data-reveal>
+        En la ingeniería de software moderna, la calidad no es una característica opcional ni una etapa final que se agrega antes del despliegue; es un factor determinante del éxito operativo, financiero y reputacional de cualquier producto tecnológico. Medir la calidad del software consiste en aplicar métricas cuantitativas y cualitativas sobre los procesos y el código para garantizar que el sistema cumpla con los requisitos funcionales, de rendimiento y de seguridad.
+      </p>
+      <p data-reveal>
+        Basándonos en el famoso aforismo de Tom DeMarco: <em>"No se puede controlar lo que no se puede medir"</em>. Sin mediciones precisas, las organizaciones toman decisiones a ciegas, acumulando "deuda técnica" que incrementa los costos de mantenimiento y eleva drásticamente el riesgo de fallos catastróficos en entornos de producción.
+      </p>
+
+      <blockquote class="pull-quote" data-reveal>
+        Invertir en la medición temprana de la calidad no es un gasto, es la estrategia más efectiva para evitar sobrecostos y pérdidas de clientes.
+      </blockquote>
+    </section>
+
+    <!-- ================= DIMENSIONES ================= -->
+    <section id="dimensiones" class="section-tint">
+      <h2 data-reveal>Dimensiones de la calidad según ISO/IEC 25010</h2>
+      <p data-reveal>
+        Para medir la calidad de forma objetiva, la industria utiliza estándares internacionales como la norma ISO/IEC 25010, la cual evalúa el software a través de diversos pilares fundamentales:
+      </p>
+
+      <div class="quality-grid" data-reveal>
+        <div class="quality-card">
+          <h3>Adecuación Funcional</h3>
+          <p>Grado en el que el software proporciona funciones que satisfacen las necesidades declaradas e implícitas bajo condiciones específicas.</p>
+        </div>
+        <div class="quality-card">
+          <h3>Eficiencia de Rendimiento</h3>
+          <p>Comportamiento del sistema en relación con la cantidad de recursos utilizados (tiempo de respuesta, uso de CPU y memoria).</p>
+        </div>
+        <div class="quality-card">
+          <h3>Mantenibilidad</h3>
+          <p>Efectividad y facilidad con la que el software puede ser modificado para corregir errores, mejorar el rendimiento o adaptarse a cambios.</p>
+        </div>
+        <div class="quality-card">
+          <h3>Seguridad y Confiabilidad</h3>
+          <p>Capacidad para proteger la información contra accesos no autorizados y mantener un nivel de desempeño óptimo en condiciones normales y críticas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MÉTRICAS ================= -->
+    <section id="metricas">
+      <h2 data-reveal>Métricas clave para evaluar el software</h2>
+      <p data-reveal>
+        Para obtener datos accionables, los equipos de desarrollo integran herramientas que recopilan métricas de manera continua durante el ciclo de vida del desarrollo.
+      </p>
+
+      <div class="model-grid">
+        <div class="model-card" data-reveal>
+          <span class="model-badge">01</span>
+          <h3>Cobertura de Código (Code Coverage)</h3>
+          <p>Mide el porcentaje de código fuente ejecutado por las pruebas automatizadas. Una cobertura óptima asegura que la mayoría de los flujos del sistema hayan sido validados.</p>
+        </div>
+        <div class="model-card" data-reveal>
+          <span class="model-badge">02</span>
+          <h3>Complejidad Ciclomática</h3>
+          <p>Cuantifica el número de caminos de ejecución independientes a través del código. A mayor complejidad, más difícil es mantener y probar el software.</p>
+        </div>
+        <div class="model-card" data-reveal>
+          <span class="model-badge">03</span>
+          <h3>Densidad de Defectos</h3>
+          <p>Calcula el número de errores confirmados encontrados en el software divididos por el tamaño del producto (por ejemplo, fallos por cada 1,000 líneas de código).</p>
+        </div>
+        <div class="model-card" data-reveal>
+          <span class="model-badge">04</span>
+          <h3>Tiempo Promedio de Reparación (MTTR)</h3>
+          <p>Mide la velocidad con la que el equipo de desarrollo puede resolver y desplegar una solución tras la detección de una falla o vulnerabilidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EJEMPLOS Y CASOS REALES ================= -->
+    <section id="ejemplos" class="section-tint">
+      <h2 data-reveal>Ejemplos de impacto: El costo de no medir</h2>
+      <p data-reveal>
+        La falta de medición y control de calidad ha provocado fallos financieros e institucionales históricos en la industria del software:
+      </p>
+
+      <div class="quality-grid" data-reveal>
+        <div class="quality-card">
+          <h3>El Desastre del Ariane 5 (1996)</h3>
+          <p>Un error no detectado de conversión de datos flotantes a enteros de 16 bits provocó la autodestrucción del cohete 37 segundos después del despegue, con pérdidas de más de 370 millones de dólares. Ocurrió por reutilizar código no probado adecuadamente en las nuevas condiciones de vuelo.</p>
+        </div>
+        <div class="quality-card">
+          <h3>Knight Capital Group (2012)</h3>
+          <p>Un fallo de software derivado de una prueba deficiente en el despliegue de un algoritmo de negociación bursátil provocó que la empresa comprara y vendiera acciones con pérdidas millonarias automáticas, perdiendo 440 millones de dólares en solo 45 minutos.</p>
+        </div>
+      </div>
+      
+      <p data-reveal style="margin-top: 24px;">
+        En contraste, las organizaciones de alto desempeño que implementan pipelines de <strong>Integración Continua (CI/CD)</strong> con medición automatizada de calidad (usando herramientas como SonarQube) logran detectar hasta un 80% de los errores antes de llegar a entornos de prueba, reduciendo los costos de corrección hasta 100 veces.
+      </p>
+    </section>
+
+    <!-- ================= CURSO ================= -->
+    <section id="curso">
+      <h2 data-reveal>Ficha del curso</h2>
+      <div class="course-card" data-reveal>
+        <div class="course-row"><span class="course-label">Universidad</span><span class="course-value">Universidad Mariano Gálvez de Guatemala</span></div>
+        <div class="course-row"><span class="course-label">Curso</span><span class="course-value">Análisis de Sistemas II</span></div>
+        <div class="course-row"><span class="course-label">Código</span><span class="course-value">22026-0903-037-A</span></div>
+        <div class="course-row"><span class="course-label">Catedrático</span><span class="course-value">Ing. Carlos Augusto Godínez Guzmán</span></div>
+        <div class="course-row"><span class="course-label">Estudiante</span><span class="course-value">Ariel Maldonado</span></div>
+        <div class="course-row"><span class="course-label">Carnet</span><span class="course-value">0903-23-12639</span></div>
+        <div class="course-row"><span class="course-label">Sección</span><span class="course-value">A — 8vo. semestre</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSIÓN ================= -->
+    <section>
+      <blockquote class="pull-quote pull-quote-lg" data-reveal>
+        La calidad del software no es un acto aislado, sino un hábito continuo sustentado en la medición, el análisis y la mejora constante.
+      </blockquote>
+    </section>
+
+    <!-- ================= REFERENCIAS ================= -->
+    <section id="referencias">
+      <h2 data-reveal>Referencias</h2>
+      <div class="references" data-reveal>
+        <p class="ref">DeMarco, T. (1982). <em>Controlling Software Projects: Management, Measurement, and Estimation</em>. Yourdon Press.</p>
+        <p class="ref">ISO/IEC. (2011). <em>Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models</em> (ISO/IEC Standard No. 25010:2011).</p>
+        <p class="ref">Pressman, R. S. (2010). <em>Ingeniería del software: Un enfoque práctico</em> (7.a ed.). McGraw-Hill.</p>
+        <p class="ref">Sommerville, I. (2011). <em>Ingeniería del software</em> (9.a ed.). Pearson Educación.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <p>Universidad Mariano Gálvez de Guatemala · Análisis de Sistemas II · Sección A</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+  </html>
+  
